@@ -21,6 +21,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Material Design Lite</title>
 
     <!-- Add to homescreen for Chrome on Android -->
@@ -119,26 +122,20 @@
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
             <!--  -->
+
           <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 500px;" >
-              <div hidden id="home-div" class = "post-login">
-                  <div>
-                      <!-- Colored raised button -->
-                      <button class="btn-block mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                          Button
-                      </button>
-                  </div>
-
-                  <button  id="seek-help" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                      Seek Help
-                  </button>
-                  <button  id="volunteer-help" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                      Volunteer to help
-                  </button>
+              <div class="mdl-cell mdl-cell--4-col">
+                  &nbsp;
               </div>
-
-          </div>
-
-          </div>
+              <div hidden id="home-div" class = "post-login mdl-cell mdl-cell--4-col ">
+                  <button type="button" class="btn btn-primary btn-lg btn-block">Seek Help</button>
+                  <button class="btn btn-success btn-lg btn-block">Volunteer to Help</button>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col">
+                  &nbsp;
+              </div>
+         </div>
+         </div>
       </main>
 
 
