@@ -1,0 +1,36 @@
+[debug] [2017-06-17T15:18:01.329Z] ----------------------------------------------------------------------
+[debug] [2017-06-17T15:18:01.329Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\nehal\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-06-17T15:18:01.329Z] CLI Version:  3.9.1
+[debug] [2017-06-17T15:18:01.329Z] Platform:     win32
+[debug] [2017-06-17T15:18:01.329Z] Node Version: v6.3.1
+[debug] [2017-06-17T15:18:01.329Z] Time:         Sat Jun 17 2017 11:18:01 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-06-17T15:18:01.329Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-17T15:18:01.357Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-17T15:18:01.361Z] > authorizing via signed-in user
+[debug] [2017-06-17T15:18:01.365Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-06-17T15:18:01.365Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/Vv8G2zJab8dc1XTEbxLGgOmaM7SgCJuGWmHkFLmaGDjbAeNyzAHjCa7vKy-u8K99',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Jun 17 2017 11:18:01 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-06-17T15:18:01.613Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-17T15:18:01.846Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/refugeenetwork-bfcb8  
+ Sat Jun 17 2017 11:18:01 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-06-17T15:18:02.270Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-17T15:18:02.270Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/refugeenetwork-bfcb8/tokens  
+ Sat Jun 17 2017 11:18:02 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-06-17T15:18:02.853Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\nehal\Desktop\Summer2017\Projects\Hackathon\Google_HackForGood\friendlychat\web-start'...
+[info] 
+[debug] [2017-06-17T15:18:02.853Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/refugeenetwork-bfcb8  
+ Sat Jun 17 2017 11:18:02 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-06-17T15:18:03.312Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-17T15:18:03.312Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1059280564259/clients/_:getWebAppConfig  
+ Sat Jun 17 2017 11:18:03 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-06-17T15:18:03.786Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
