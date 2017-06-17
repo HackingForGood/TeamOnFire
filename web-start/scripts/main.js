@@ -18,6 +18,7 @@ function RefugeeNetwork() {
   this.signInButton = document.getElementById('sign-in');
   this.signOutButton = document.getElementById('sign-out');
   this.signInSnackbar = document.getElementById('must-signin-snackbar');
+  this.postLoginDiv = document.getElementsByClassName("post-login");
 
   // Saves message on form submit.
   //this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
@@ -49,20 +50,15 @@ RefugeeNetwork.prototype.initFirebase = function() {
   this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
 };
 // Loads chat messages history and listens for upcoming ones.
-RefugeeNetwork.prototype.loadMessages = function() {
+RefugeeNetwork.prototype.showHomeDivs = function() {
   // Reference to the /messages/ database path.
-  this.messagesRef = this.database.ref('messages');
-  // Make sure we remove all previous listeners.
-  this.messagesRef.off();
+  for(var i=0;i<this.postLoginDiv.length;i++){
+    this.postLoginDiv[i].removeAttribute('hidden');
+  }
 
-  // Loads the last 12 messages and listen for new ones.
-  var setMessage = function(data) {
-    var val = data.val();
-    this.displayMessage(data.key, val.name, val.text, val.photoUrl, val.imageUrl);
-  }.bind(this);
-  this.messagesRef.limitToLast(12).on('child_added', setMessage);
-  this.messagesRef.limitToLast(12).on('child_changed', setMessage);
+
 };
+
 
 // Saves a new message on the Firebase DB.
 RefugeeNetwork.prototype.saveMessage = function(e) {
@@ -152,6 +148,12 @@ RefugeeNetwork.prototype.signIn = function() {
 RefugeeNetwork.prototype.signOut = function() {
   // Sign out of Firebase.
   this.auth.signOut();
+
+
+  for(var i=0;i<this.postLoginDiv.length;i++){
+    this.postLoginDiv[i].setAttribute('hidden', 'true');
+  }
+
 };
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
 RefugeeNetwork.prototype.onAuthStateChanged = function(user) {
@@ -176,10 +178,14 @@ RefugeeNetwork.prototype.onAuthStateChanged = function(user) {
     this.signInButton.setAttribute('hidden', 'true');
 
     // We load currently existing chant messages.
-    this.loadMessages();
+    this.showHomeDivs();
+
+    //this.showHomeDivs();
 
     // We save the Firebase Messaging Device token and enable notifications.
     this.saveMessagingDeviceToken();
+
+
   } else { // User is signed out!
     // Hide user's profile and sign-out button.
     this.userName.setAttribute('hidden', 'true');
