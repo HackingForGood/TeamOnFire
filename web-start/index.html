@@ -131,14 +131,14 @@
                   <button id="seek-help" type="button" class="btn btn-primary btn-lg btn-block">Seek Help</button>
                   <button id ="volunteer-help" class="btn btn-success btn-lg btn-block">Volunteer to Help</button>
               </div>
-              <div hidden id="V1-div" class = "post-login mdl-cell mdl-cell--4-col">
+              <div hidden id="V1-div" class = "1-div post-login mdl-cell mdl-cell--4-col">
 
                 You can help with
 
-                <button  id="product-offer" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                <button  id="product-offer" class=" mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
                 Products
                 </button>
-                <button  id="skill-offer" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                <button  id="service-offer" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
                   Skills
                 </button>
 
@@ -147,14 +147,14 @@
                 </button>
 
               </div>
-              <div hidden id="S1-div" class = "post-login mdl-cell mdl-cell--4-col">
+              <div hidden id="S1-div" class = "1-div post-login mdl-cell mdl-cell--4-col">
 
                 What do you need?
 
                 <button  id="product-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
                 Products
                 </button>
-                <button  id="skill-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                <button  id="service-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
                   Service
                 </button>
 
@@ -170,22 +170,98 @@
               just the product.type,
               on click repopulate ul with details of type selected to help
 
-              <ul id ="list-to-help">
                 <!--names of products type offered-->
-              </ul>
+              <div hidden id ="product-share">
+                <button  id="food-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                Food / water
+                </button>
+                <button  id="shelter-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                  Shelter
+                </button>
+
+                <button  id="clothing-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                  Clothing / Sanitation
+                </button>
+              </div>
+
+              <div hidden id ="service-share">
+                <button  id="emerg-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+              Emergency (medical/military)
+                </button>
+                <button  id="nonemerg-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+              Non Emergency (cooking/carpentary/masonary,etc)
+                </button>
+
+
+              </div>
+              <div hidden id ="other-need">
+                <button  id="aa-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+              aa
+                </button>
 
               </div>
 
-              <div hidden id="S2-div" class = "post-login mdl-cell mdl-cell--4-col">
+              <div hidden>
+              <ul  id ="list-to-help">
+                <!--names of products type offered-->
+              </ul>
+            </div>
+              </div>
+
+
+  <div hidden id="S2-div" class = "post-login mdl-cell mdl-cell--4-col">
+
+      <div hidden id ="product-need">
+        PN
+      </div>
+
+        <div hidden id ="service-need">
+          SN
+        </div>
+  </div>
+
+
+              <div hidden id="S2-div2" class = "post-login mdl-cell mdl-cell--4-col">
 
               types...list from db,
               just the product.type,
               on click repopulate ul with details of type selected for need
 
-              <ul id = "list-of-available-help">
+                <!--names of products type offered-->
+              <div hidden id ="product-need">
+                <button  id="food-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                Food / water
+                </button>
+                <button  id="shelter-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                  Shelter
+                </button>
+
+                <button  id="clothing-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                  Clothing / Sanitation
+                </button>
+              </div>
+
+              <div hidden id ="service-need">
+                <button  id="emerg-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+              Emergency (medical/military)
+                </button>
+                <button  id="nonemerg-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+              Non Emergency (cooking/carpentary/masonary,etc)
+                </button>
+
+
+              </div>
+              <div hidden id ="other-need">
+                <button  id="aa-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+              aa
+                </button>
+
+              </div>
+              <div hidden>
+              <ul  id = "list-of-available-help">
                 <!--names of products type offered-->
               </ul>
-
+            </div>
               </div>
               <div class="mdl-cell mdl-cell--4-col">
                   &nbsp;

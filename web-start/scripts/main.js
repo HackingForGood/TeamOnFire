@@ -27,16 +27,40 @@ function RefugeeNetwork() {
   this.v2Div = document.getElementById('V2-div');
   this.s2Div = document.getElementById('S2-div');
 
+  this.productNeed = document.getElementById('product-need');
+  this.serviceNeed = document.getElementById('service-need');
+  this.otherNeed = document.getElementById('other-need');
+
+  this.productOffer = document.getElementById('product-offer');
+  this.serviceOffer = document.getElementById('service-offer');
+  this.otherOffer = document.getElementById('other-offer');
+
+
+
   // Saves message on form submit.
   //this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
 
   // Takes you to the next respective page
-  this.seekerDiv.addEventListener('click', this.seekerClick.bind(this)); // todo ankur
+  this.seekerDiv.addEventListener('click', this.seekerClick.bind(this));
   this.volunteerDiv.addEventListener('click', this.helperClick.bind(this));
 
 
+  this.productNeed.addEventListener('click', this.prodNeedClick.bind(this));
+  this.serviceNeed.addEventListener('click', this.serviceNeedClick.bind(this));
+  this.otherNeed.addEventListener('click', this.otherNeedClick.bind(this));
+
+  this.productOffer.addEventListener('click', this.prodOfferClick.bind(this));
+  this.serviceOffer.addEventListener('click', this.serviceOfferClick.bind(this));
+  this.otherOffer.addEventListener('click', this.otherOfferClick.bind(this));
+
+  //this.v1S1Buttons = document.querySelectorAll('#V1-div button');
+
+
+ //  for(var i=0;i<   this.v1S1Buttons.length;i++){
+ //   this.v1S1Buttons[i].addEventListener('click', function(){console.log(i);},false);
+ // }
 
   // Toggle for the button.
   var buttonTogglingHandler = this.toggleButton.bind(this);
@@ -51,8 +75,72 @@ function RefugeeNetwork() {
   // this.mediaCapture.addEventListener('change', this.saveImageMessage.bind(this));
 
   this.initFirebase();
+  this.loadRefugees();
 }
 
+
+RefugeeNetwork.prototype.loadRefugees = function() {
+  // Reference to the /messages/ database path.
+  this.messagesRef = this.database.ref('refugees');
+  // Make sure we remove all previous listeners.
+  this.messagesRef.off();
+
+  // Loads the last 12 messages and listen for new ones.
+  var setMessage = function(data) {
+    var val = data.val();
+    console.log(val.name+" , "+val.seek);
+    console.log(data.name+" , "+data.seek);
+    //this.displayMessage(data.key, val.name, val.text, val.photoUrl, val.imageUrl);
+  }.bind(this);
+  this.messagesRef.limitToLast(12).on('child_added', setMessage);
+  this.messagesRef.limitToLast(12).on('child_changed', setMessage);
+};
+
+RefugeeNetwork.prototype.prodNeedClick = function() {
+this.populate("product-need","S2-div");
+};
+RefugeeNetwork.prototype.serviceNeedClick = function() {
+this.populate("service-need","S2-div");
+};
+RefugeeNetwork.prototype.otherNeedClick = function() {
+this.populate("other-need","S2-div");
+};
+
+RefugeeNetwork.prototype.prodOfferClick = function() {
+this.populate("product-share","V2-div");
+};
+RefugeeNetwork.prototype.serviceOfferClick = function() {
+this.populate("service-share","V2-div");
+};
+RefugeeNetwork.prototype.otherOfferClick = function() {
+this.populate("other-share", "V2-div");
+};
+
+RefugeeNetwork.prototype.populate = function(subItem, mainItem) {
+console.log("item to populate >> "+subItem+","+mainItem);
+  for(var i = 0; i < this.postLoginDiv.length;i++){
+
+this.postLoginDiv[i].setAttribute("hidden", true);
+
+  }
+
+
+// one more for loop todo nehal
+
+var mainNode = document.getElementById(mainItem);
+var subNode = document.getElementById(subItem);
+mainNode.removeAttribute("hidden");
+
+this.v1S1divs = document.querySelectorAll('#'+mainItem+' div');
+  for(var i = 0; i < this.v1S1divs.length;i++){
+
+this.v1S1divs[i].setAttribute("hidden", true);
+
+  }
+
+subNode.removeAttribute("hidden");
+
+}
 // Sets up shortcuts to Firebase features and initiate firebase auth.
 RefugeeNetwork.prototype.initFirebase = function() {
   // Shortcuts to Firebase SDK features.
@@ -275,6 +363,13 @@ this.v1Div.setAttribute("hidden", true);
 
 // Show required div
 this.s1Div.removeAttribute("hidden");
+};
+
+//V1BtnClick
+RefugeeNetwork.prototype.V1BtnClick = function(btn) {
+  // hide other divs
+console.log("btn clicked ?? "+btn)
+
 };
 
 // Resets the given MaterialTextField.
