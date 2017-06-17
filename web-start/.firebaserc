@@ -1,5 +1,6 @@
 {
   "projects": {
-    "refugeenetwork-staging": "refugeenetwork-bfcb8"
+    "refugeenetwork-staging": "refugeenetwork-bfcb8",
+    "refugee-stage": "refugeenetwork-bfcb8"
   }
 }
