@@ -19,11 +19,24 @@ function RefugeeNetwork() {
   this.signOutButton = document.getElementById('sign-out');
   this.signInSnackbar = document.getElementById('must-signin-snackbar');
   this.postLoginDiv = document.getElementsByClassName("post-login");
+  this.homeDiv = document.getElementById('home-div');
+  this.seekerDiv = document.getElementById('seek-help');
+  this.volunteerDiv = document.getElementById('volunteer-help');
+  this.v1Div = document.getElementById('V1-div');
+  this.s1Div = document.getElementById('S1-div');
+  this.v2Div = document.getElementById('V2-div');
+  this.s2Div = document.getElementById('S2-div');
 
   // Saves message on form submit.
   //this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
+
+  // Takes you to the next respective page
+  this.seekerDiv.addEventListener('click', this.seekerClick.bind(this)); // todo ankur
+  this.volunteerDiv.addEventListener('click', this.helperClick.bind(this));
+
+
 
   // Toggle for the button.
   var buttonTogglingHandler = this.toggleButton.bind(this);
@@ -52,9 +65,11 @@ RefugeeNetwork.prototype.initFirebase = function() {
 // Loads chat messages history and listens for upcoming ones.
 RefugeeNetwork.prototype.showHomeDivs = function() {
   // Reference to the /messages/ database path.
-  for(var i=0;i<this.postLoginDiv.length;i++){
-    this.postLoginDiv[i].removeAttribute('hidden');
-  }
+  // for(var i=0;i<this.postLoginDiv.length;i++){
+  //   this.postLoginDiv[i].removeAttribute('hidden');
+  // }
+
+  this.homeDiv.removeAttribute("hidden");
 
 
 };
@@ -233,6 +248,33 @@ RefugeeNetwork.prototype.saveMessagingDeviceToken = function() {
 // Requests permissions to show notifications.
 RefugeeNetwork.prototype.requestNotificationsPermissions = function() {
   // TODO(DEVELOPER): Request permissions to send notifications.
+};
+
+// Action on helpeclick
+RefugeeNetwork.prototype.helperClick = function() {
+    console.log("selected volunteer work >> ");
+  // hide other divs
+this.homeDiv.setAttribute("hidden", true);
+this.s1Div.setAttribute("hidden", true);
+//  ....
+//  ....
+
+// Show required div
+this.v1Div.removeAttribute("hidden");
+};
+
+
+// Action on helpeclick
+RefugeeNetwork.prototype.seekerClick = function() {
+  // hide other divs
+this.homeDiv.setAttribute("hidden", true);
+this.v1Div.setAttribute("hidden", true);
+
+//  ....
+//  ....
+
+// Show required div
+this.s1Div.removeAttribute("hidden");
 };
 
 // Resets the given MaterialTextField.
