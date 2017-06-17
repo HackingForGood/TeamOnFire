@@ -61,6 +61,12 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+    body {
+        top: 0px !important;
+    }
     </style>
   </head>
   <body>
@@ -89,6 +95,7 @@
           </ul>
         </div>
       </header>
+
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
           <img src="images/user.jpg" class="demo-avatar">
@@ -121,20 +128,31 @@
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
-            <!--  -->
-
+            <!--Start : Main content -->
           <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 500px;" >
               <div class="mdl-cell mdl-cell--4-col">
                   &nbsp;
               </div>
               <div hidden id="home-div" class = "post-login mdl-cell mdl-cell--4-col ">
-                  <button type="button" class="btn btn-primary btn-lg btn-block">Seek Help</button>
-                  <button class="btn btn-success btn-lg btn-block">Volunteer to Help</button>
+                  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                  <strong>Select a langauage:</strong><div  class="mdl-grid" id="google_translate_element"></div><script type="text/javascript">
+                      function googleTranslateElementInit() {
+                          new google.translate.
+                              TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,en,fr,es,ur,de', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+                      }
+                  </script>
+                  <div  class="mdl-grid">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Seek Help</button>
+                  </div>
+                  <div  class="mdl-grid">
+                    <button type="button" class="btn btn-success btn-lg btn-block">Volunteer to Help</button>
+                  </div>
               </div>
               <div class="mdl-cell mdl-cell--4-col">
                   &nbsp;
               </div>
          </div>
+            <!--End : Main content -->
          </div>
       </main>
 
