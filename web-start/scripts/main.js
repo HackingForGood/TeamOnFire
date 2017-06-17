@@ -97,13 +97,13 @@ RefugeeNetwork.prototype.loadRefugees = function() {
 };
 
 RefugeeNetwork.prototype.prodNeedClick = function() {
-this.populate("product-need","S2-div");
+this.populate("product-needed","S2-div");
 };
 RefugeeNetwork.prototype.serviceNeedClick = function() {
-this.populate("service-need","S2-div");
+this.populate("service-needed","S2-div");
 };
 RefugeeNetwork.prototype.otherNeedClick = function() {
-this.populate("other-need","S2-div");
+this.populate("other-needed","S2-div");
 };
 
 RefugeeNetwork.prototype.prodOfferClick = function() {

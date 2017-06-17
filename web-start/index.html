@@ -16,14 +16,14 @@
   limitations under the License
 -->
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Material Design Lite</title>
 
     <!-- Add to homescreen for Chrome on Android -->
@@ -47,229 +47,253 @@
     <link rel="canonical" href="http://www.example.com/">
     -->
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
     </style>
-  </head>
-  <body>
-    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+</head>
+<body>
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Home</span>
-          <div class="mdl-layout-spacer"></div>
-          <div id="user-container">
-      <div hidden id="user-pic"></div>
-      <div hidden id="user-name"></div>
-      <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-        Sign-out
-      </button>
-      <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-        <i class="material-icons">account_circle</i>Sign-in with Google
-      </button>
-    </div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-            <li class="mdl-menu__item">About</li>
-            <li class="mdl-menu__item">Contact</li>
-            <li class="mdl-menu__item">Legal information</li>
-          </ul>
-        </div>
-      </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <img src="images/user.jpg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>hello@example.com</span>
+            <span class="mdl-layout-title">Home</span>
             <div class="mdl-layout-spacer"></div>
-            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons" role="presentation">arrow_drop_down</i>
-              <span class="visuallyhidden">Accounts</span>
+            <div id="user-container">
+                <div hidden id="user-pic"></div>
+                <div hidden id="user-name"></div>
+                <button hidden id="sign-out"
+                        class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                    Sign-out
+                </button>
+                <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                    <i class="material-icons">account_circle</i>Sign-in with Google
+                </button>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                <i class="material-icons">more_vert</i>
             </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-              <li class="mdl-menu__item">hello@example.com</li>
-              <li class="mdl-menu__item">info@example.com</li>
-              <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                <li class="mdl-menu__item">About</li>
+                <li class="mdl-menu__item">Contact</li>
+                <li class="mdl-menu__item">Legal information</li>
             </ul>
-          </div>
+        </div>
+    </header>
+
+    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="demo-drawer-header">
+            <img src="images/user.jpg" class="demo-avatar">
+            <div class="demo-avatar-dropdown">
+                <span>hello@example.com</span>
+                <div class="mdl-layout-spacer"></div>
+
+            </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
-          <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
-            Sign-out
-          </button>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+                                                       role="presentation">home</i>Home</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+                                                       role="presentation">inbox</i>Volunteer</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+                                                       role="presentation">delete</i>Seek</a>
+            <div class="mdl-layout-spacer"></div>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+                                                       role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
-      </div>
-      <main class="mdl-layout__content mdl-color--grey-100">
+    </div>
+    <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
-            <!--  -->
+            <!--Start : Main content -->
+            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid"
+                 style="height: 550px;">
+                <script type="text/javascript"
+                        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <strong>Select a langauage:</strong>
+                    </div><div class="mdl-cell mdl-cell--4-col" id="google_translate_element"></div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                    &nbsp;
+                </div>
+                <div hidden id="home-div" class="post-login mdl-cell mdl-cell--4-col ">
 
-          <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 500px;" >
-              <div class="mdl-cell mdl-cell--4-col">
-                  &nbsp;
-              </div>
-              <div hidden id="home-div" class = "post-login mdl-cell mdl-cell--4-col ">
-                  <button id="seek-help" type="button" class="btn btn-primary btn-lg btn-block">Seek Help</button>
-                  <button id ="volunteer-help" class="btn btn-success btn-lg btn-block">Volunteer to Help</button>
-              </div>
-              <div hidden id="V1-div" class = "1-div post-login mdl-cell mdl-cell--4-col">
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'en',
+                                includedLanguages: 'ar,en,fr,es,ur,de',
+                                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+                            }, 'google_translate_element');
+                        }
+                    </script>
+                    <div class="mdl-grid">
+                        <button id="seek-help" type="button" class="btn btn-success btn-lg btn-block">Seek Help</button>
+                    </div>
+                    <div class="mdl-grid">
+                        <button id="volunteer-help" type="button" class="btn btn-primary btn-lg btn-block">Volunteer to
+                            Help
+                        </button>
+                    </div>
+                </div>
+                <div hidden id="V1-div" class="1-div post-login mdl-cell mdl-cell--4-col">
+                    <div class="mdl-grid">
+                        Hey volunteer,<strong>You can help with</strong>
+                    </div>
+                    <button id="product-offer"
+                            class="btn btn-primary btn-lg btn-block">
+                        Products
+                    </button>
+                    <button id="service-offer"
+                            class="btn btn-primary btn-lg btn-block">
+                        Skills
+                    </button>
 
-                You can help with
+                    <button id="other-offer"
+                            class="btn btn-primary btn-lg btn-block">
+                        Other
+                    </button>
 
-                <button  id="product-offer" class=" mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                Products
-                </button>
-                <button  id="service-offer" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                  Skills
-                </button>
+                </div>
+                <div hidden id="S1-div" class="1-div post-login mdl-cell mdl-cell--4-col">
+                    <div class="mdl-grid">
+                        Hey seeker,<strong>What do you need?</strong>
+                    </div>
+                    <button id="product-need"
+                            class="btn btn-success btn-lg btn-block">
+                        Products
+                    </button>
+                    <button id="skill-need" class="btn btn-success btn-lg btn-block">
+                        Service
+                    </button>
 
-                <button  id="other-offer" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                  Other
-                </button>
-
-              </div>
-              <div hidden id="S1-div" class = "1-div post-login mdl-cell mdl-cell--4-col">
-
-                What do you need?
-
-                <button  id="product-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                Products
-                </button>
-                <button  id="service-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                  Service
-                </button>
-
-                <button  id="other-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                  Other
-                </button>
-
-
-              </div>
-              <div hidden id="V2-div" class = "post-login mdl-cell mdl-cell--4-col">
-
-              types...list from db,
-              just the product.type,
-              on click repopulate ul with details of type selected to help
-
-                <!--names of products type offered-->
-              <div hidden id ="product-share">
-                <button  id="food-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                Food / water
-                </button>
-                <button  id="shelter-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                  Shelter
-                </button>
-
-                <button  id="clothing-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                  Clothing / Sanitation
-                </button>
-              </div>
-
-              <div hidden id ="service-share">
-                <button  id="emerg-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-              Emergency (medical/military)
-                </button>
-                <button  id="nonemerg-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-              Non Emergency (cooking/carpentary/masonary,etc)
-                </button>
+                    <button id="other-need" class="btn btn-success btn-lg btn-block">
+                        Other
+                    </button>
 
 
-              </div>
-              <div hidden id ="other-need">
-                <button  id="aa-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-              aa
-                </button>
+                </div>
+                <div hidden id="V2-div" class = "post-login mdl-cell mdl-cell--4-col">
+                    <div class="mdl-grid">
+                        Hey volunteer,<strong>You can share the following</strong>
+                    </div>
+                    <!--names of products type offered-->
+                    <div hidden id ="product-share">
+                        <button  id="food-share" class="btn btn-primary btn-lg btn-block">
+                            Food / water
+                        </button>
+                        <button  id="shelter-share" class="btn btn-primary btn-lg btn-block">
+                            Shelter
+                        </button>
 
-              </div>
+                        <button  id="clothing-share" class="btn btn-primary btn-lg btn-block">
+                            Clothing / Sanitation
+                        </button>
+                    </div>
 
-              <div hidden>
-              <ul  id ="list-to-help">
-                <!--names of products type offered-->
-              </ul>
+                    <div hidden id ="service-share">
+                        <button  id="emerg-share" class="btn btn-primary btn-lg btn-block">
+                            Emergency (medical/military)
+                        </button>
+                        <button  id="nonemerg-share" class="btn btn-primary btn-lg btn-block">
+                            Non Emergency (cooking/carpentary/masonary,etc)
+                        </button>
+
+
+                    </div>
+                    <div hidden id ="other-need">
+                        <button  id="aa-need" class="btn btn-primary btn-lg btn-block">
+                            aa
+                        </button>
+
+                    </div>
+
+                    <div hidden>
+                        <ul  id ="list-to-help">
+                            <!--names of products type offered-->
+                        </ul>
+                    </div>
+                </div>
+                <div hidden id="S2-div" class = "post-login mdl-cell mdl-cell--4-col">
+
+                    <div class="mdl-grid">
+                        Hey seeker,<strong>What do you need?</strong>
+                    </div>
+                    <!--names of products type offered-->
+                    <div hidden id ="product-needed">
+                        <button  id="food-need" class="btn btn-success btn-lg btn-block">
+                            Food / water
+                        </button>
+                        <button  id="shelter-needed" class="btn btn-success btn-lg btn-block">
+                            Shelter
+                        </button>
+
+                        <button  id="clothing-needed" class="btn btn-success btn-lg btn-block">
+                            Clothing / Sanitation
+                        </button>
+                    </div>
+
+                    <div hidden id ="service-need">
+                        <button  id="emerg-need" class="btn btn-success btn-lg btn-block">
+                            Emergency (medical/military)
+                        </button>
+                        <button  id="nonemerg-need" class="btn btn-success btn-lg btn-block">
+                            Non Emergency (cooking/carpentary/masonary,etc)
+                        </button>
+
+
+                    </div>
+                    <div hidden id ="other-need">
+                        <button  id="aa-need" class="btn btn-success btn-lg btn-block">
+                            aa
+                        </button>
+
+                    </div>
+                    <div hidden>
+                        <ul  id = "list-of-available-help">
+                            <!--names of products type offered-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+                        <h2 class="mdl-card__title-text">Updates</h2>
+
+                    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                        <a href="https://www.theguardian.com/world/refugees" class="mdl-button mdl-js-button mdl-js-ripple-effect" >Gaurdian Refugee News</a>
+                        <a href="https://www.wsj.com/articles/for-refugees-tears-and-relief-1486165137" class="mdl-button mdl-js-button mdl-js-ripple-effect" >WSJ Refugee News</a>
+                        <a href="https://www.reuters.com/article/us-mideast-crisis-syria-russia-idUSKBN1980N9" class="mdl-button mdl-js-button mdl-js-ripple-effect" >Syria News</a>
+                        </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                    &nbsp;
+                </div>
             </div>
-              </div>
-
-
-  <div hidden id="S2-div" class = "post-login mdl-cell mdl-cell--4-col">
-
-      <div hidden id ="product-need">
-        PN
-      </div>
-
-        <div hidden id ="service-need">
-          SN
+            <!--End : Main content -->
         </div>
-  </div>
-
-
-              <div hidden id="S2-div2" class = "post-login mdl-cell mdl-cell--4-col">
-
-              types...list from db,
-              just the product.type,
-              on click repopulate ul with details of type selected for need
-
-                <!--names of products type offered-->
-              <div hidden id ="product-need">
-                <button  id="food-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                Food / water
-                </button>
-                <button  id="shelter-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                  Shelter
-                </button>
-
-                <button  id="clothing-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                  Clothing / Sanitation
-                </button>
-              </div>
-
-              <div hidden id ="service-need">
-                <button  id="emerg-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-              Emergency (medical/military)
-                </button>
-                <button  id="nonemerg-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-              Non Emergency (cooking/carpentary/masonary,etc)
-                </button>
-
-
-              </div>
-              <div hidden id ="other-need">
-                <button  id="aa-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-              aa
-                </button>
-
-              </div>
-              <div hidden>
-              <ul  id = "list-of-available-help">
-                <!--names of products type offered-->
-              </ul>
-            </div>
-              </div>
-              <div class="mdl-cell mdl-cell--4-col">
-                  &nbsp;
-              </div>
-         </div>
-         </div>
-      </main>
-
+    </main>
     <!--material script-->
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
@@ -277,5 +301,5 @@
     <script src="/__/firebase/init.js"></script>
 
     <script src="scripts/main.js"></script>
-  </body>
+</body>
 </html>
