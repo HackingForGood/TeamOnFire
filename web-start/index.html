@@ -193,27 +193,90 @@
 
 
                 </div>
-                <div hidden id="V2-div" class="post-login mdl-cell mdl-cell--4-col">
+                <div hidden id="V2-div" class = "post-login mdl-cell mdl-cell--4-col">
 
                     types...list from db,
                     just the product.type,
                     on click repopulate ul with details of type selected to help
 
-                    <ul id="list-to-help">
-                        <!--names of products type offered-->
-                    </ul>
+                    <!--names of products type offered-->
+                    <div hidden id ="product-share">
+                        <button  id="food-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Food / water
+                        </button>
+                        <button  id="shelter-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Shelter
+                        </button>
 
+                        <button  id="clothing-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Clothing / Sanitation
+                        </button>
+                    </div>
+
+                    <div hidden id ="service-share">
+                        <button  id="emerg-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Emergency (medical/military)
+                        </button>
+                        <button  id="nonemerg-share" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Non Emergency (cooking/carpentary/masonary,etc)
+                        </button>
+
+
+                    </div>
+                    <div hidden id ="other-need">
+                        <button  id="aa-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            aa
+                        </button>
+
+                    </div>
+
+                    <div hidden>
+                        <ul  id ="list-to-help">
+                            <!--names of products type offered-->
+                        </ul>
+                    </div>
                 </div>
-
-                <div hidden id="S2-div" class="post-login mdl-cell mdl-cell--4-col">
+                <div hidden id="S2-div2" class = "post-login mdl-cell mdl-cell--4-col">
 
                     types...list from db,
                     just the product.type,
                     on click repopulate ul with details of type selected for need
 
-                    <ul id="list-of-available-help">
-                        <!--names of products type offered-->
-                    </ul>
+                    <!--names of products type offered-->
+                    <div hidden id ="product-need">
+                        <button  id="food-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Food / water
+                        </button>
+                        <button  id="shelter-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Shelter
+                        </button>
+
+                        <button  id="clothing-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Clothing / Sanitation
+                        </button>
+                    </div>
+
+                    <div hidden id ="service-need">
+                        <button  id="emerg-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Emergency (medical/military)
+                        </button>
+                        <button  id="nonemerg-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            Non Emergency (cooking/carpentary/masonary,etc)
+                        </button>
+
+
+                    </div>
+                    <div hidden id ="other-need">
+                        <button  id="aa-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                            aa
+                        </button>
+
+                    </div>
+                    <div hidden>
+                        <ul  id = "list-of-available-help">
+                            <!--names of products type offered-->
+                        </ul>
+                    </div>
                 </div>
                 <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
                         <h2 class="mdl-card__title-text">Updates</h2>
@@ -234,7 +297,6 @@
             <!--End : Main content -->
         </div>
     </main>
-
     <!--material script-->
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
