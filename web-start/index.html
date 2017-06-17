@@ -21,6 +21,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Material Design Lite</title>
 
     <!-- Add to homescreen for Chrome on Android -->
@@ -119,24 +122,16 @@
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
             <!--  -->
+
           <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="height: 500px;" >
-              <div hidden id="home-div" class = "post-login">
-                  <div>
-                      <!-- Colored raised button -->
-                      <button class="btn-block mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                          Button
-                      </button>
-                  </div>
-
-                  <button  id="seek-help" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                      Seek Help
-                  </button>
-                  <button  id="volunteer-help" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
-                      Volunteer to help
-                  </button>
+              <div class="mdl-cell mdl-cell--4-col">
+                  &nbsp;
               </div>
-
-              <div hidden id="V1-div" class = "nehal">
+              <div hidden id="home-div" class = "post-login mdl-cell mdl-cell--4-col ">
+                  <button id="seek-help" type="button" class="btn btn-primary btn-lg btn-block">Seek Help</button>
+                  <button id ="volunteer-help" class="btn btn-success btn-lg btn-block">Volunteer to Help</button>
+              </div>
+              <div hidden id="V1-div" class = "post-login mdl-cell mdl-cell--4-col">
 
                 You can help with
 
@@ -154,24 +149,52 @@
 
               </div>
 
-              <div hidden id="S1-div" class = "nehal">
+              <div hidden id="S1-div" class = "post-login mdl-cell mdl-cell--4-col">
 
-               todo ankur
-                <!--todo ankur-->
+                What do you need?
+
+                <button  id="product-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                Products
+                </button>
+                <button  id="skill-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                  Service
+                </button>
+
+                <button  id="other-need" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+                  Other
+                </button>
 
 
               </div>
 
+              <div hidden id="V2-div" class = "post-login mdl-cell mdl-cell--4-col">
 
-          </div>
+              types...list from db,
+              just the product.type,
+              on click repopulate ul with details of type selected to help
 
+              <ul id ="list-to-help">
+                <!--names of products type offered-->
+              </ul>
 
+              </div>
 
-          </div>
+              <div hidden id="S2-div" class = "post-login mdl-cell mdl-cell--4-col">
+
+              types...list from db,
+              just the product.type,
+              on click repopulate ul with details of type selected for need
+
+              <ul id = "list-of-available-help">
+                <!--names of products type offered-->
+              </ul>
+
+              </div>
+              <!--Place above here -->
+              <div class="mdl-cell mdl-cell--4-col">
+                  &nbsp;
+              </div>
       </main>
-
-
-
     </div>
 
 
